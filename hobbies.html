@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Hobbies</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bio.html">Biodata</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <h2>My Hobbies</h2>
+        <!-- Template for Hobbies -->
+        <template id="hobby-template">
+            <div class="hobby">
+                <h3 class="hobby-title"></h3>
+                <img class="hobby-image" alt="Hobby Image">
+                <p class="hobby-description"></p>
+            </div>
+        </template>
+
+        <!-- Hobby List Container -->
+        <div id="hobby-list">
+            <!-- Hobbies will be dynamically added here -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for adding hobbies dynamically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define hobbies data
+            const hobbies = [
+                { title: "Bermain Game", description: "Menjelajah dunia virtual setiap hari adalah ritual yang saya pelihara dengan penuh semangat, memperluas cakrawala dan keterampilan dalam permainan", image: "Game3.jpg" },
+                { title: "Work Out", description: "Setiap hari dimulai dengan berolahraga, itu adalah cara terbaik untuk memulai hari.", image: "Gym1.jpg" },
+                { title: "Hiking", description: "Menyisir puncak-puncak gunung adalah perjalanan keindahan yang saya cintai, menemukan ketenangan di ketinggian dan keajaiban alam yang memukau.", image: "Muncak.jpg" }
+            ];
+
+            // Get template and hobby list container
+            const template = document.getElementById('hobby-template');
+            const hobbyList = document.getElementById('hobby-list');
+
+            // Loop through hobbies data and create hobby elements
+            hobbies.forEach(function(hobby) {
+                // Clone the template content
+                const clone = document.importNode(template.content, true);
+
+                // Set hobby title, image, and description
+                clone.querySelector('.hobby-title').textContent = hobby.title;
+                clone.querySelector('.hobby-image').src = hobby.image;
+                clone.querySelector('.hobby-description').textContent = hobby.description;
+
+                // Append the hobby to the hobby list
+                hobbyList.appendChild(clone);
+            });
+        });
+    </script>
+</body>
+</html>

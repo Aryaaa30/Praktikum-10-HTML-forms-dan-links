@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #019e9e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #019e9e;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    margin: 50px auto;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #019e9e;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+img{
+    width: 80%;
+    height: 80%;
+}
+
+/* Mengatur ukuran gambar di dalam carousel */
+.carousel-image {
+    max-width: 75%; /* Atur lebar maksimal sesuai keinginan, bisa diganti dengan nilai lain */
+    margin: 0 auto; /* Agar carousel berada di tengah halaman */
+    width: 75%; /* Memastikan gambar mengisi lebar penuh carousel */
+}
+
+/* Mengatur ukuran gambar di dalam kartu */
+.card-img-top {
+    max-height: 200px; /* Anda dapat menyesuaikan tinggi maksimum sesuai kebutuhan */
+    object-fit: cover; /* Memastikan gambar diatur sesuai tinggi maksimum */
+    width: 100%; /* Memastikan gambar mengisi lebar penuh kartu */
+}
+
+.hobby {
+    display: flex; /* Menggunakan flexbox untuk mengatur posisi elemen */
+    align-items: center; /* Posisi vertikal konten ke tengah */
+    margin-bottom: 20px; /* Spasi antara setiap hobi */
+}
+
+.hobby-title{
+    margin: 0 10px;
+}
+
+.hobby-description {
+    margin-left: 20px; /* Spasi antara foto dan teks */
+}
+
+.hobby-image {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.traveling img {
+    max-width: 400px; /* Atur lebar maksimum foto */
+}
+
+
+
+
+
